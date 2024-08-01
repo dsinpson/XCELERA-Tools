@@ -1,0 +1,497 @@
+{
+	"Id": "5d4dc6d05207ad5ee002d8ba",
+	"CustomerId": 1,
+	"Cycle": 1,
+	"ExecutionPlan": {
+		"ExecutionPlanId": 33,
+		"Name": "LA Test"
+	},
+	"TestPlan": {
+		"TestPlanId": 7,
+		"Name": "TP- OpenSis"
+	},
+	"TestSuite": {
+		"TestSuiteId": 444,
+		"Name": "Login"
+	},
+	"ExecutionConfig": {
+		"Name": "ConfigOne",
+		"Locator": 1,
+		"Browser": "Chrome",
+		"TestTool": "Selenium"
+	},
+	"TestCaseId": 552,
+	"TestCaseName": "Realizar login com dados válidos de estudante",
+	"Actions": [
+		{
+			"ActionId": 28,
+			"Name": "Acessar Tela de Login do OpenSis",
+			"Order": 1,
+			"Procedures": [
+				{
+					"CategoryMethodId": 25,
+					"MethodId": 62,
+					"Object": {
+						"ObjectScreenId": 0,
+						"Name": "",
+						"Locator1": "",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "",
+					"Attributes": [
+						{
+							"Name": "URL",
+							"Value": "https://starc.grupohdi.com/infoexchange/"
+						}
+					],
+					"Order": 1,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				}
+			],
+			"Status": "Não Executado",
+			"TypeError": "",
+			"Comment": ""
+		},
+		{
+			"ActionId": 29,
+			"Name": "Informar dados de login",
+			"Order": 2,
+			"Procedures": [
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 2,
+					"Object": {
+						"ObjectScreenId": 43,
+						"Name": "Usuario",
+						"Locator1": "//*[@id='box-login']/table/tbody/tr[2]/td[1]/input",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "starcadmin",
+					"Attributes": [],
+					"Order": 1,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 2,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "Senha",
+						"Locator1": "//*[@id='box-login']/table/tbody/tr[2]/td[2]/input",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "starc123!",
+					"Attributes": [],
+					"Order": 2,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 2,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "Senha",
+						"Locator1": "//*[@id='box-login']/table/tbody/tr[2]/td[3]/input",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "1234!",
+					"Attributes": [],
+					"Order": 3,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				}
+			],
+			"Status": "Não Executado",
+			"TypeError": "",
+			"Comment": ""
+		},
+		{
+			"ActionId": 30,
+			"Name": "Clicar no botão de entrar",
+			"Order": 3,
+			"Procedures": [
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 1,
+					"Object": {
+						"ObjectScreenId": 45,
+						"Name": "BtoEntrar",
+						"Locator1": "//*[@id='entrar']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "",
+					"Attributes": [],
+					"Order": 1,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 5,
+					"Object": {
+						"ObjectScreenId": 0,
+						"Name": "",
+						"Locator1": "",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "",
+					"Attributes": [],
+					"Order": 2,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				}
+			],
+			"Status": "Não Executado",
+			"TypeError": "",
+			"Comment": ""
+		},
+		{
+			"ActionId": 31,
+			"Name": "Informar dados de cadastro",
+			"Order": 2,
+			"Procedures": [
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 2,
+					"Object": {
+						"ObjectScreenId": 43,
+						"Name": "FullName",
+						"Locator1": "//*[@id='txtbxFullname']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "Test Wes",
+					"Attributes": [],
+					"Order": 1,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 90,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "CHB_Invalid",
+						"Locator1": "//*[@id='chkbxInvalid']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "True",
+					"Attributes": [],
+					"Order": 2,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 2,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "TXT_Account",
+						"Locator1": "//*[@id='txtbxdescription']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "Account Test",
+					"Attributes": [],
+					"Order": 3,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 3,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "CBO_Country",
+						"Locator1": "//*[@id='Select']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "Argentina",
+					"Attributes": [],
+					"Order": 4,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 1,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "RDB_Packs",
+						"Locator1": "//*[@id='rbpack']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "",
+					"Attributes": [],
+					"Order": 5,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 1,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "RDB_Tray24",
+						"Locator1": "//*[@id='rbtray']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "",
+					"Attributes": [],
+					"Order": 6,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 3,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "CBO_UserType",
+						"Locator1": "//*[@id='User_type']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "Business Unity",
+					"Attributes": [],
+					"Order": 6,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 1,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "RDB_DPMUser",
+						"Locator1": "//*[@id='rdbtnDPMUSER']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "",
+					"Attributes": [],
+					"Order": 7,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 3,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "CBO_UserRelation",
+						"Locator1": "//*[@id='User_Relation']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "Alessandra",
+					"Attributes": [],
+					"Order": 8,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 2,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "TXT_UserForLogin",
+						"Locator1": "//*[@id='txtUserlogin']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "Test Wes",
+					"Attributes": [],
+					"Order": 9,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 2,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "TXT_EMAIl",
+						"Locator1": "//*[@id='txtEmail']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "Test Wes Mail",
+					"Attributes": [],
+					"Order": 10,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				},
+				{
+					"CategoryMethodId": 1,
+					"MethodId": 2,
+					"Object": {
+						"ObjectScreenId": 44,
+						"Name": "TXT_Phone",
+						"Locator1": "//*[@id='txtPhone']",
+						"Locator2": "",
+						"LeftValue": 0,
+						"TopValue": 0,
+						"Width": 0,
+						"Height": 0
+					},
+					"Value": "1234657",
+					"Attributes": [],
+					"Order": 10,
+					"Status": "Não Executado",
+					"TypeError": "",
+					"Print": "",
+					"Comment": "",
+					"StartDate": "",
+					"EndDate": ""
+				}
+			],
+			"Status": "Não Executado",
+			"TypeError": "",
+			"Comment": ""
+		}
+	],
+	"Status": "Não Executado",
+	"TypeError": "",
+	"Comment": "",
+	"Worker": "BRHDI",
+	"DataSet": 1,
+	"Order": 1,
+	"Debug": false,
+	"Downloaded": true,
+	"ScheduleDate": "0001-01-01T00:00:00Z",
+	"StartDate": "",
+	"EndDate": ""
+}

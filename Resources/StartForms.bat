@@ -1,0 +1,1 @@
+start /d "C:\Resources\STARC.Image.Forms" STARC.Image.Forms.exe

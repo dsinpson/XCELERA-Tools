@@ -1,0 +1,1 @@
+start /d "C:\Resources\STARC.Image.Api" STARC.Image.SelfHostedApp.exe
