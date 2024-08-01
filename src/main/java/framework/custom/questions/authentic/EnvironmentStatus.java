@@ -3,6 +3,7 @@ package framework.custom.questions.authentic;
 import framework.custom.questions.IQuestion;
 import framework.custom.utils.BaseDatosAplicacion;
 import framework.custom.utils.ConexionAuthentic;
+import framework.dataProviders.ConfigFileReader;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -24,7 +25,10 @@ public class EnvironmentStatus implements IQuestion<Object[]> {
     public static final String TIPO_PROCESS ="process";
     public static final String TIPO_INTERCHANGE ="interchange";
     public static final String TIPO_IAP ="iap";
-    public static final String TABLE_SYSTEM_STATUS ="FROM BCOLOMBIA_OWNER.SYSTEM_STATUS ";
+    public static  String TABLE_SYSTEM_STATUS ="FROM BCOLOMBIA_OWNER.SYSTEM_STATUS ";
+    ConfigFileReader f = new ConfigFileReader("configs/config.properties");
+    private final String bd = f.getPropertyByKey("IsBD4.2");
+    private final boolean bd42=Boolean.parseBoolean(bd);
 
 
     Connection conexion;
@@ -43,6 +47,10 @@ public class EnvironmentStatus implements IQuestion<Object[]> {
 
     @Override
     public Object[] ask() throws SQLException {
+        if (!bd42)
+        {
+            TABLE_SYSTEM_STATUS ="FROM SCHAUTAQ.SYSTEM_STATUS ";
+        }
         BaseDatosAplicacion bda = new BaseDatosAplicacion();
         String strQuery;
         StringBuilder logAmbienteBuilder = new StringBuilder();

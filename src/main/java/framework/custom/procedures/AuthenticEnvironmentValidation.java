@@ -5,6 +5,7 @@ import framework.custom.questions.authentic.AtmStatus;
 import framework.custom.questions.authentic.EnvironmentStatus;
 import framework.data.dynamicValues.DynamicValuesCustom;
 import framework.data.entities.Procedure;
+import framework.dataProviders.ConfigFileReader;
 import framework.enums.TypeError;
 import framework.helpers.ExecutionStatusHelper;
 import framework.helpers.GeneralHelper;
@@ -30,6 +31,12 @@ public class AuthenticEnvironmentValidation implements IPerformableProcedure {
     private String logAmbienAuthentic = "";
     private Object[] resultadoAmbientes;
     private int erroresAmbienAuthentic = 0;
+    ConfigFileReader f = new ConfigFileReader("configs/config.properties");
+    private final String bd = f.getPropertyByKey("IsBD4.2");
+    private String servidor = "";
+    private final boolean bd42=Boolean.parseBoolean(bd);
+
+
 
     public AuthenticEnvironmentValidation(Procedure procedure, ScreenshotHelper screenshotHelper){
         this.procedure = procedure;
@@ -40,6 +47,16 @@ public class AuthenticEnvironmentValidation implements IPerformableProcedure {
 
     @Override
     public void executeCustomProcedure() throws Exception {
+
+        if(bd42)
+        {
+            servidor ="%sbmdecst02%";
+        }
+        else
+        {
+            servidor = "lbmdebqswt06v";
+        }
+
 
         Date fechaIni = new Date();
 
@@ -117,7 +134,7 @@ public class AuthenticEnvironmentValidation implements IPerformableProcedure {
             if (!tipoTransaccion.equals(TRANS_TYPE_CUENTAS_INSCRITAS) && (!tipoTarjeta.equals(CARD_TYPE_DCC))){
 
                 resultadoAmbientes = EnvironmentStatus.
-                                        with("%sbmdecst02%"+"iSerieS","%sbmdecst02%"+"iSeries_ATM_ICH", "%sbmdecst02%"+iap).
+                                        with(servidor+"iSerieS",servidor+"iSeries_ATM_ICH", servidor+iap).
                                         ask();
                 logger.log(Level.INFO,() -> VALIDATION_ENVIRONMENT_RESULT_IS + resultadoAmbientes[0]);
 
@@ -151,7 +168,7 @@ public class AuthenticEnvironmentValidation implements IPerformableProcedure {
                 //***** Comprueba el estado de los servidores de notificaciones *******
                 if (tipoTransaccion.equals(TRANS_TYPE_CAMBIO_DE_CLAVE) || estadoActualPinforzado.equals(STATUS_I)) {
                     Object[] resultadoNotificaciones = EnvironmentStatus.
-                                                        with("%sbmdecst02%"+"iSeries", "%sbmdecst02%"+"iSeries_ICH","%sbmdecst02%"+"iSeries_IAP_NF2").
+                                                        with(servidor + "iSeries", servidor +"iSeries_ICH",servidor +"iSeries_IAP_NF2").
                                                         ask();
                     logger.log(Level.INFO,() -> VALIDATION_NOTIFICATION_RESULT_IS + resultadoNotificaciones[0]);
 
@@ -169,7 +186,7 @@ public class AuthenticEnvironmentValidation implements IPerformableProcedure {
             }
             else if (tipoTarjeta.equals(CARD_TYPE_DCC)) {
                 Object[] resultadoNotificaciones = EnvironmentStatus.
-                                                    with("%sbmdecst02%"+"CIBC", "%sbmdecst02%"+"CIBC_ICH", "%sbmdecst02%"+iap).
+                                                    with(servidor +"CIBC", servidor +"CIBC_ICH", servidor+iap).
                                                     ask();
                 logger.log(Level.INFO,() -> VALIDATION_NOTIFICATION_RESULT_IS + resultadoNotificaciones[0]);
 
@@ -189,7 +206,7 @@ public class AuthenticEnvironmentValidation implements IPerformableProcedure {
         logger.log(Level.INFO,() -> mensaje);
 
         //Trampa
-        erroresAmbienAuthentic = 0;
+        //erroresAmbienAuthentic = 0;
         if (erroresAmbienAuthentic > 0) {
             String commentIni = mensaje +logAmbienAuthentic;
             String methodName = new Object(){}.getClass().getEnclosingMethod().getName();
@@ -203,8 +220,16 @@ public class AuthenticEnvironmentValidation implements IPerformableProcedure {
     }
 
     private void validateProcces(String process,String interchange, String iap) throws Exception{
+        if(bd42)
+        {
+            servidor ="%sbmdecst02%";
+        }
+        else
+        {
+            servidor = "lbmdebqswt06v";
+        }
         resultadoAmbientes =  EnvironmentStatus.
-                with("%sbmdecst02%"+process,"%sbmdecst02%"+interchange, "%sbmdecst02%"+iap).
+                with(servidor + process,servidor + interchange, servidor + iap).
                 ask();
         logger.log(Level.INFO,() -> VALIDATION_ENVIRONMENT_RESULT_IS + resultadoAmbientes[0]);
 
